@@ -1,0 +1,29 @@
+{
+  "name": "crawler",
+  "version": "0.0.1",
+  "description": "Simplistic HTML crawler exploring pages under one domain and their assets.",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.40",
+    "@types/node": "^7.0.0",
+    "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.0",
+    "mocha": "^3.2.0",
+    "mocha-typescript": "^1.0.15",
+    "popsicle": "^9.0.0",
+    "systemjs": "^0.19.41",
+    "ts-node": "^2.0.0",
+    "typescript": "^2.1.5",
+    "typings": "^2.1.0"
+  },
+  "scripts": {
+    "build": "./node_modules/typescript/bin/tsc -p ./",
+    "start": "node dist/index.js",
+    "postinstall": "./node_modules/typings/dist/bin.js install",
+    "test": "./node_modules/mocha/bin/mocha  -r ts-node/register src/**/*.spec.ts"
+  },
+  "author": "Alexander Kostitsyn",
+  "license": "ISC"
+}
